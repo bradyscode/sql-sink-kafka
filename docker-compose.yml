@@ -47,7 +47,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.consumer
-    container_name: consumer
     depends_on:
       - kafka
       - postgres
