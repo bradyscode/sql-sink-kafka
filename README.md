@@ -68,6 +68,20 @@ The system tracks the following user actions:
    SELECT * FROM useractions LIMIT 10;
    ```
 
+## Endpoints
+
+**Get all user actions**
+
+```
+{{baseURL}}/api/user/actions
+```
+
+**Get all user actions between two timestamps**
+
+```
+{{baseURL}}/api/user/actions?startTimeStamp=2025-08-26T12:50:00&endTimeStamp=2025-08-29T13:00:00
+```
+
 ## Services
 
 ### Producer
