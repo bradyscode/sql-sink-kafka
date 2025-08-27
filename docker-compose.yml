@@ -53,6 +53,16 @@ services:
     environment:
       # Use the correct Kafka hostname in the consumer environment if needed
       - KAFKA_BROKER=kafka:9092
+  
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: api
+    depends_on:
+      - consumer
+    ports:
+      - "5005:5005"
 
 volumes:
   pgdata:
